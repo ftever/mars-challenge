@@ -40,7 +40,7 @@ func readSensorMessages(ws *websocket.Conn, incomingMessages chan string, sensor
 // to the Challenge Controller API via an HTTP POST
 func postAvgReading(msg Message, gc string) {
 	admin_password := "1234"
-	/*		log.Println("=========================================")
+			log.Println("=========================================")
 	    log.Println("game console ulr:",gc)
 		log.Println("Aadmin Pass:",admin_password)
 		log.Println("AVG Solar Flare:",msg.Solarflare)
@@ -48,7 +48,7 @@ func postAvgReading(msg Message, gc string) {
 		log.Println("AVG Temperature:",msg.Temperature)
 		log.Println("TimeStamp:",msg.Stamp)
 
-	*/log.Println("=========================================")
+	log.Println("=========================================")
 
 	b, err := json.Marshal(msg)
 	fmt.Printf("Marshal Json: %s\n", b)
